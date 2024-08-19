@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+:root{
+    /* == COLORS == */
+    --blue-900 : hsl(233, 54%, 16%);
+    --blue-600 : hsl(234, 25%, 52%);
+    --pink-900 : hsl(341, 92%, 62%);
+    --pink-600 : hsl(341, 100%, 83%);
+    --grey : hsl(232, 10%, 56%);
+    --white : hsl(0, 0%, 100%);
+    /* == GRADIENTS BASE == */
+    --orange-start-gradient : hsl(13, 100%, 64%);
+    --pink-end-gradient : hsl(322, 87%, 55%);
+    --blue-start-gradient : hsl(237, 100%, 64%);
+    /* == FONTS == */
+    --main-font: var('Plus Jakarta Sans');
+}
