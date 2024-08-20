@@ -6,11 +6,166 @@
     --pink-900 : hsl(341, 92%, 62%);
     --pink-600 : hsl(341, 100%, 83%);
     --grey : hsl(232, 10%, 56%);
+    --smooth-white : hsl(236, 100%, 97%);
     --white : hsl(0, 0%, 100%);
     /* == GRADIENTS BASE == */
     --orange-start-gradient : hsl(13, 100%, 64%);
     --pink-end-gradient : hsl(322, 87%, 55%);
     --blue-start-gradient : hsl(237, 100%, 64%);
     /* == FONTS == */
-    --main-font: var('Plus Jakarta Sans');
+    --main-font: 'Plus Jakarta Sans';
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--main-font), 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 700;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+}
+.nav__logo, .footer__logo{
+    width: auto;
+    height: 20px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    width: 168px;
+    height: 59px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 28px;
+}
+.nav__button{
+    color: var(--white);
+    background-color: var(--blue-900);
+}
+.hero{
+    padding: 64px 0px;
+}
+.hero__content{
+    margin-bottom: 48px;
+    padding: 0px 20px;
+}
+.hero__title{
+    margin-bottom: 24px;
+    font-size: 40px;
+    line-height: 120%;
+    font-weight: 800;
+    color: var(--blue-900);
+}
+.hero__resume{
+    margin-bottom: 40px;
+    width: 326px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--grey);
+}
+.hero__btn{
+    color: var(--white);
+    background: linear-gradient(var(--orange-start-gradient), var(--pink-end-gradient));
+}
+.hero__images{
+    width: 100%;
+    height: 384px;
+    background-image: url('./assets/image-hero-mobile@2x.webp');
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: center;
+}
+/* .hero__images img{
+    width: 100%;
+} */
+
+main{
+    padding: 64px 20px 80px 20px;
+    background: linear-gradient(var(--white), var(--smooth-white));
+}
+.card__introduction{
+    padding: 32px;
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 800;
+    color: var(--white);
+    background: linear-gradient(var(--orange-start-gradient), var(--pink-end-gradient));
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 25px 50px hsla(233, 54%, 16%, 0.1);
+}
+.card{
+    position: relative;
+    margin-top: 60px;
+    padding: 64px 32px 40px 32px;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0px 25px 50px hsla(233, 54%, 16%, 0.1);
+}
+.card::before{
+    position: absolute;
+    top: -28px;
+    left: 32px;
+    content: ' ';
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(var(--orange-start-gradient), var(--pink-end-gradient));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 56px;
+}
+.card__animation::before{
+    background-image: url('./assets/icon-animation.svg');
+}
+.card__design::before{
+    background-image: url('./assets/icon-design.svg');
+}
+.card__photography::before{
+    background-image: url('./assets/icon-photography.svg');
+}
+.card__crypto::before{
+    background-image: url('./assets/icon-crypto.svg');
+}
+.card__business::before{
+    background-image: url('./assets/icon-business.svg');
+}
+.card__title{
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 800;
+    color: var(--blue-900);
+}
+.card__content{
+    margin-bottom: 24px;
+    color: var(--grey);
+}
+.card__btn{
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 700;
+    color: var(--pink-600);
+    background: none;
+    border: none;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 20px;
+    color: var(--white);
+    background-color: var(--blue-900);
+}
+.footer__btn{
+    color: var(--white);
+    background: linear-gradient(var(--blue-start-gradient), var(--pink-end-gradient));
 }
