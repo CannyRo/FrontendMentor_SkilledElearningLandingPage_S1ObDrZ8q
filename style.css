@@ -8,6 +8,7 @@
     --grey : hsl(232, 10%, 56%);
     --smooth-white : hsl(236, 100%, 97%);
     --white : hsl(0, 0%, 100%);
+    --white-50 : hsla(0, 0%, 100%, 0.5);
     /* == GRADIENTS BASE == */
     --orange-start-gradient : hsl(13, 100%, 64%);
     --pink-end-gradient : hsl(322, 87%, 55%);
@@ -65,10 +66,14 @@ header{
     font-weight: 700;
     border: none;
     border-radius: 28px;
+    cursor: pointer;
 }
 .nav__button{
     color: var(--white);
     background-color: var(--blue-900);
+}
+.nav__button:hover, .nav__button:focus, .nav__button:active{
+    background-color: var(--blue-600);
 }
 .hero{
     padding: 64px 0px;
@@ -98,6 +103,10 @@ header{
     color: var(--white);
     background: linear-gradient(var(--orange-start-gradient), var(--pink-end-gradient));
 }
+.hero__btn:hover, .hero__btn:focus, .hero__btn:active{
+    background: linear-gradient(var(--white-50), var(--white-50)),
+    linear-gradient(var(--orange-start-gradient), var(--pink-end-gradient));
+}
 .hero__medias{
     display: flex;
     align-items: center;
@@ -109,12 +118,10 @@ header{
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* overflow-x: hidden; */
 }
-.hero__img {
+.hero__img{
     width: 120%;
 }
-
 main{
     padding: 64px 20px 80px 20px;
     background: linear-gradient(var(--white), var(--smooth-white));
@@ -145,7 +152,6 @@ main{
     position: relative;
     display: flex;
     flex-direction: column;
-    /* margin-top: 60px; */
     padding: 64px 32px 40px 32px;
     background-color: var(--white);
     border-radius: 15px;
@@ -213,9 +219,13 @@ main{
     font-size: 18px;
     line-height: 150%;
     font-weight: 700;
-    color: var(--pink-600);
+    color: var(--pink-900);
     background: none;
     border: none;
+    cursor: pointer;
+}
+.card__btn:hover, .card__btn:focus, .card__btn:active{
+    color: var(--pink-600);
 }
 footer{
     display: flex;
@@ -238,40 +248,15 @@ footer{
     color: var(--white);
     background: linear-gradient(var(--blue-start-gradient), var(--pink-end-gradient));
 }
+.footer__btn:hover, .footer__btn:focus, .footer__btn:active{
+    background: linear-gradient(var(--white-50), var(--white-50)),
+    linear-gradient(var(--blue-start-gradient), var(--pink-end-gradient));
+}
 
 @media (min-width: 768px) {
     header{
         overflow: hidden;
     }
-    /* .absolute_01{
-        z-index: 10;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 60px;
-        height: 60px;
-        background-color:darkorange
-    }
-    .absolute_02{
-        z-index: 10;
-        position: absolute;
-        top: 310px;
-        right: 0;
-        width: 303px;
-        height: 60px;
-        background-color:dodgerblue;
-    }
-    .absolute_03{
-        z-index: 10;
-        position: absolute;
-        top: 134px;
-        right: 86px;
-        width: 216px;
-        height: 382px;
-        background-color:greenyellow;
-        opacity: 0.5;
-    } */
-
     .nav{
         padding: 24px 44px;
     }
@@ -286,7 +271,6 @@ footer{
         justify-content: center;
         width: 100%;
         height: 528px;
-        overflow-x: hidden;
     }
     .hero__content{
         margin-bottom: 0px;
@@ -295,21 +279,16 @@ footer{
         width: 372px;
     }
     .hero__medias{
-        display: flex;
-        align-items: center;
         width: 372px;
         height: 100%;
         overflow: hidden;
     }
     .hero__picture{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 696px;
         height: 724px;
         overflow: hidden;
     }
-    .hero__img {
+    .hero__img{
         z-index: 1;
         position: absolute;
         top: -80px;
@@ -319,7 +298,6 @@ footer{
     }
     main{
         padding: 64px 44px 144px 44px;
-        display: grid;
         grid-column: 1fr 1fr;
         row-gap: 60px;
         column-gap: 24px;
@@ -340,43 +318,10 @@ footer{
     }
 }
 @media (min-width: 1440px) {
-    header{
-        overflow: hidden;
-    }
-    /* .absolute_01{
-        z-index: 10;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 60px;
-        height: 60px;
-        background-color:darkorange
-    }*/
-    /* .absolute_02{
-        z-index: 10;
-        position: absolute;
-        top: 444px;
-        right: 0;
-        width: 536px;
-        height: 60px;
-        background-color:dodgerblue;
-    } */
-    /* .absolute_03{
-        z-index: 10;
-        position: absolute;
-        top: 171px;
-        right: 219px;
-        width: 317px;
-        height: 560px;
-        background-color:greenyellow;
-        opacity: 0.5;
-    } */
-
     .nav{
         padding: 24px 80px;
     }
     .nav__logo, .footer__logo{
-        width: auto;
         height: 28px;
     }
     .btn{
@@ -385,10 +330,6 @@ footer{
         height: 59px;
     }
     .hero{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
         height: 688px;
         overflow-x: hidden;
     }
@@ -399,7 +340,6 @@ footer{
     }
     .hero__title{
         font-size: 56px;
-        line-height: 120%;
     }
     .hero__resume{
         width: 457px;
@@ -412,14 +352,10 @@ footer{
         overflow: hidden;
     }
     .hero__picture{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 100%;
         height: 100%;
-        overflow: hidden;
     }
-    .hero__img {
+    .hero__img{
         top: -139px;
         left: calc(50% + 12px);
         width: 1040px;
@@ -442,23 +378,8 @@ footer{
     .card__introduction{
         font-size: 32px;
     }
-    .card__introduction, .card{
-        padding: 64px 32px 40px 32px ;
-        height: 100%;
-    }
     .card__title{
         font-size: 24px;
-    }
-    .card__btn{
-        display: flex;
-        align-items: center;
-        height: 28px;
-        font-size: 18px;
-        line-height: 150%;
-        font-weight: 700;
-        color: var(--pink-600);
-        background: none;
-        border: none;
     }
     footer{
         padding: 24px 44px;
